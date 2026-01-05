@@ -283,3 +283,155 @@ tbody tr:hover {
         transform: translateY(0);
     }
 }
+
+/* Root look */
+.dashboard {
+    background: #f8fafc;
+    color: #0f172a;
+    font-family: 'Inter', system-ui, sans-serif;
+}
+
+/* Stat cards */
+.stat-card {
+    background: white;
+    border-radius: 14px;
+    padding: 22px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.06);
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.stat-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 14px 34px rgba(0, 0, 0, 0.10);
+}
+
+.stat-card.primary h3 {
+    color: #2563eb;
+}
+
+.stat-card.success h3 {
+    color: #16a34a;
+}
+
+.stat-card.neutral h3 {
+    color: #64748b;
+}
+
+/* Filters */
+.dashboard-filters {
+    background: white;
+    border-radius: 12px;
+    padding: 16px;
+    display: flex;
+    gap: 12px;
+    align-items: center;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.05);
+}
+
+/* Status Toggle */
+.status-toggle {
+    position: relative;
+    width: 44px;
+    height: 24px;
+    display: inline-block;
+}
+
+.status-toggle input {
+    display: none;
+}
+
+.toggle-slider {
+    position: absolute;
+    inset: 0;
+    background: #e5e7eb;
+    border-radius: 999px;
+    transition: background 0.25s ease;
+}
+
+.toggle-slider::before {
+    content: '';
+    position: absolute;
+    width: 18px;
+    height: 18px;
+    top: 3px;
+    left: 3px;
+    background: white;
+    border-radius: 50%;
+    transition: transform 0.25s ease;
+}
+
+.status-toggle input:checked+.toggle-slider {
+    background: #16a34a;
+}
+
+.status-toggle input:checked+.toggle-slider::before {
+    transform: translateX(20px);
+}
+
+.status-switch {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 14px;
+    color: #5f6368;
+}
+
+.status-switch span {
+    font-weight: 500;
+}
+
+.status-switch span.active {
+    color: #1a73e8;
+}
+
+.status-switch span.inactive {
+    color: #d93025;
+}
+
+/* Switch */
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 44px;
+    height: 24px;
+}
+
+.switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+/* Slider background */
+.slider {
+    position: absolute;
+    cursor: pointer;
+    inset: 0;
+    background-color: #dadce0;
+    transition: 0.25s;
+    border-radius: 999px;
+}
+
+/* Knob */
+.slider::before {
+    position: absolute;
+    content: "";
+    height: 20px;
+    width: 20px;
+    left: 2px;
+    bottom: 2px;
+    background-color: #ffffff;
+    transition: 0.25s;
+    border-radius: 50%;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
+}
+
+/* Checked state */
+.switch input:checked+.slider {
+    background-color: #34a853;
+    /* Google green */
+}
+
+.switch input:checked+.slider::before {
+    transform: translateX(20px);
+}

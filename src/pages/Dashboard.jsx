@@ -65,14 +65,27 @@ const Dashboard = () => {
                     <option value="Female">Female</option>
                 </select>
 
-                <select
-                    className="dashboard-filter-select"
-                    onChange={(e) => setStatusFilter(e.target.value)}
-                >
-                    <option value="All">All Status</option>
-                    <option value="Active">Active</option>
-                    <option value="Inactive">Inactive</option>
-                </select>
+                <div className="status-switch">
+                    <span className={!statusFilter || statusFilter === 'Inactive' ? 'inactive' : ''}>
+                        Inactive
+                    </span>
+
+                    <label className="switch">
+                        <input
+                            type="checkbox"
+                            checked={statusFilter === 'Active'}
+                            onChange={(e) =>
+                                setStatusFilter(e.target.checked ? 'Active' : 'Inactive')
+                            }
+                        />
+                        <span className="slider"></span>
+                    </label>
+
+                    <span className={statusFilter === 'Active' ? 'active' : ''}>
+                        Active
+                    </span>
+                </div>
+
 
                 <div className="dashboard-filter-actions">
                     <button
