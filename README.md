@@ -75,3 +75,7 @@ src/
 ├── css/             # External CSS for specialized styling
 ├── App.jsx          # Route definitions and Provider wrapping
 └── main.jsx         # Application entry point
+
+
+# SCREEN RECORDING
+LINK - https://www.loom.com/share/bd615ce564b14040a5eb1a7b1a426120
