@@ -3,7 +3,7 @@ import { useNavigate } from 'react-router-dom';
 import './css/Login.css';
 
 const demoEmployees = [
-    { id: 'emp001', email: 'john.doe@example.com', password: 'password123' },
+    { id: 'emp001', email: 'john@example.com', password: 'password' },
     { id: 'emp002', email: 'jane.smith@example.com', password: 'securepass' },
 ];
 

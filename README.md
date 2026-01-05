@@ -1,70 +1,77 @@
-# Getting Started with Create React App
+# 🚀 EMS Pro - Employee Management System
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+A high-performance, professional dashboard for managing workforce data. This project features a clean "Google-inspired" user interface, secure authentication, and persistent local storage.
 
-## Available Scripts
 
-In the project directory, you can run:
 
-### `npm start`
+---
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## 📖 Project Overview
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+**EMS Pro** is a comprehensive CRUD (Create, Read, Update, Delete) application designed for HR administrators. It streamlines the process of managing employee records, tracking employment status, and generating reports.
 
-### `npm test`
+### Key Features:
+* **Secure Access:** Protected routes ensure only authorized users can view sensitive data.
+* **Real-time Analytics:** Summary cards that instantly update counts for Total, Active, and Inactive staff.
+* **Dynamic Directory:** A searchable, filterable table for quick access to employee profiles.
+* **Image Support:** Capability to upload and store employee profile pictures.
+* **Data Persistence:** Uses Browser LocalStorage so data remains intact after refreshes or restarts.
+* **Print Functionality:** Optimized CSS for printing professional employee lists.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+---
 
-### `npm run build`
+## 🛠 Tech Stack
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+The project is built using modern web technologies focused on speed and maintainability:
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+| Technology | Purpose |
+| :--- | :--- |
+| **React 18** | Frontend library for building the component-based UI. |
+| **React Router 6** | Handles client-side routing and navigation guards. |
+| **Context API** | Manages global state for both Authentication and Employee data. |
+| **Local Storage** | Acts as the "Database" for client-side data persistence. |
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
-### `npm run eject`
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+---
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## 🚀 Steps to Run Locally
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+Follow these instructions to set up the project on your local machine.
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+### 1. Prerequisites
+Ensure you have the following installed:
+* [Node.js](https://nodejs.org/) (LTS Version recommended)
+* An IDE (like VS Code)
 
-## Learn More
+### 2. Installation
+Clone the repository and install the necessary dependencies:
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+```bash
+# Clone the repository
+git clone [https://github.com/your-username/ems-pro.git](https://github.com/your-username/ems-pro.git)
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+# Navigate into the project folder
+cd ems-pro
 
-### Code Splitting
+# Install dependencies
+npm install
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+# Running the Project
+npm run dev
 
-### Analyzing the Bundle Size
+# Credentials
+Use the following credentials to access the protected dashboard:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+Username: john@example.com
 
-### Making a Progressive Web App
+Password: password
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+#Project Structure
+src/
+├── context/         # AuthContext and EmployeeContext (Global State)
+├── components/      # Reusable UI parts (Navbar, Sidebar, etc.)
+├── pages/           # Main views: Login, Dashboard, EmployeeForm
+├── css/             # External CSS for specialized styling
+├── App.jsx          # Route definitions and Provider wrapping
+└── main.jsx         # Application entry point
